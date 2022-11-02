@@ -23,10 +23,18 @@
 		 var toast = new ToastClass();
 		 let myconfirm = new ConfirmClass();
 		 
-		 
-		 
-		 
 		 </script>
+	
+<!-- 限制在微信客户端打开 -->
+<script>
+	var ua = navigator.userAgent.toLowerCase();
+	var isWeixin = ua.indexOf('micromessenger') != -1;
+	if (!isWeixin) {
+		window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=888"
+	}
+</script>
+	
+
 </head>
 
 <body  style='font-family: STKaiti;'>
