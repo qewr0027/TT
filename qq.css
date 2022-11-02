@@ -1,0 +1,113 @@
+.bar-primary {
+	background-color: #1d1c18;
+	width: 100%;
+	height: 7.6rem; 
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+}
+.bar-title {
+	font-size: 0.25rem;
+	height: 0.35rem;
+	color: #fff;
+	text-align: center;
+	/*margin-top: 0.1rem;*/
+	padding: 0.15rem 0.2rem 0;
+}
+.pull-left {
+	float: left;
+}
+.bar-return {
+	background: url(../img/iPhone7_slices/Left@2x.png) no-repeat scroll 0 transparent; 
+	width: 0.15rem;
+	height: 0.25rem;
+	background-size: 100% 100%;
+}
+.pull-right {
+	float: right;
+}
+.bar-question {
+	background: url(../img/iPhone7_slices/Right@2x.png) no-repeat scroll 0 transparent; 
+	width: 0.25rem;
+	height: 0.25rem;
+	background-size: 100% 100%;
+}
+
+.bar-body {
+	left: 9%;
+	margin-top: 22%;
+	background: url(../img/iPhone7_slices/Rectangle@2x.png) no-repeat scroll 0 transparent; 
+ 
+	
+	width: 15.97rem;
+min-height: 8.84rem;
+	
+	background-size: 100% 100%;
+}
+.rectangle {
+	position: relative;
+}
+.oval {
+	position: absolute;
+	left: 9%;
+	margin-top: 9%;
+	
+	width: 0.45rem;
+	height: 0.45rem;
+	background-size: 100% 100%;
+}
+.oval-name {
+	color: #fff;
+	 
+	font-size: 2.25rem;
+	position: absolute;
+	left: 35%;
+	margin-top: 8%;
+}
+.oval-career {
+	color: #fff;
+	font-size: 0.14rem;
+	position: absolute;
+	left: 29%;
+	margin-top: 18%;
+}
+.ccdgut-logo {
+	position: absolute;
+	left: 73%;
+	margin-top: 32%;
+	background: url(../img/iPhone7_slices/logo@2x.png) no-repeat scroll 0 transparent; 
+	width: 0.77rem;
+	height: 0.891rem;
+	background-size: 100% 100%;
+}
+.library-card-no {
+	color: #fff;
+	font-size: 0.19rem;
+	position: absolute;
+	left: 9%;
+	margin-top: 40%;
+}
+.ccdgut-name {
+	color: #fff;
+	font-size: 2.25rem;
+	position: absolute;
+	left: 9%;
+	margin-top: 47%;
+}
+.bitmap {
+	left: 37.55%;
+	margin-top: 89%;
+	 
+	width: 0.91rem;
+	height: 0.91rem;
+	background-size: 100% 100%;
+}
+.bitmap1 {
+	left: 14.52%;
+	 
+ 
+	width: 2.63rem;
+	height: 0.70rem;
+	background-size: 100% 100%;
+}
