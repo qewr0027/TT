@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+	<head>
+		<title>出校</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scala=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+		<!-- 色块选择JS -->
+        <script src="colorpicker.js"></script>
+          
+		<!-- 限制在微信客户端打开 -->
+		<script>
+			var ua = navigator.userAgent.toLowerCase();
+			var isWeixin = ua.indexOf('micromessenger') != -1;
+			if (!isWeixin) {
+				window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=888"
+			}
+		</script>
+
+        <script>
+			let value;
+			function myFunction(){
+				value = String(prompt("数字"));
+			   
+				}
+				myFunction();//调用函数
+			</script>
+
+        <style>
+            .picker {
+                width: 248px;
+                height: 50px;
+                cursor: pointer;
+                position: absolute;
+                top: 532px;
+                color:white;
+                text-align: center;
+                line-height: 50px;
+                font-size: 35px;
+            }
+        </style>
+
+	</head>	
+	<body style='background-color1:#DFE8F6;;height:100%;'  >
+		   <center> 
+		    <table>
+		       <tr>
+		          <td align="center"> <div id='jinchuleixingstr' style='font-size:35px'></div> </td>
+		       </tr>   
+
+		       <tr>
+		          <td align="center"  style='border-bottom: 1px solid #d0d0d5;'>           
+		          <div class="oval" style='border-radius: 25px;width:130px'  test="">
+
+
+					<!-- 校园卡头像（有头像） -->
+		              <img src='photo/hiyycc.jpg'
+
+					  style='width:130px;border-style1: dashed;border-radius1: 15px;border-color1: #FF7F50'></div>
+
+					  <!-- 校园卡头像下方姓名学号 -->
+
+		         		 张三-202235010769 
+		          
+		          </td>
+		       </tr>
+
+		       <tr>		         
+		           <td align="center"> <br/> <div id='mymessage' style='font-size:35px'></div></td>
+		       </tr>
+		       
+		       <tr>
+		           <td  align="center"> 
+		               <div class='shijiandiv' style='width: 100%;font-size:35px;align-items: center;justify-content: center;display: flex;text-align: center; color: red;width1:220px;background-color1: #E9F1F6;height1:50px;border-radius: 10px'>
+			           </div>
+		          </td>
+		       </tr>
+
+		       <tr>
+		          <td align="center"><img src="" id='myimg' height='100px'  style='margin-top:10px'></td>
+		       </tr>
+		    </table>
+		    </center>
+
+            <!-- 随机码色块 -->
+            <span class="picker" id="color-picker">随机码&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span>		    
+            
+	</body>
+</html>
+
+	 <script type="text/javascript" src="https://wx.ccdgut.edu.cn/ccdgutwx//js/jquery-1.7.2.min.js"></script>
+	 <script>
+ 
+	  Date.prototype.format =function(format)
+	  {
+	  var o = {
+	  "M+" : this.getMonth()+1, //month
+	  "d+" : this.getDate(), //day
+	  "h+" : this.getHours(), //hour
+	  "m+" : this.getMinutes(), //minute
+	  "s+" : this.getSeconds(), //second
+	  "q+" : Math.floor((this.getMonth()+3)/3), //quarter
+	  "S" : this.getMilliseconds() //millisecond
+	  }
+	  if(/(y+)/.test(format)) format=format.replace(RegExp.$1,
+	  (this.getFullYear()+"").substr(4- RegExp.$1.length));
+	  for(var k in o)if(new RegExp("("+ k +")").test(format))
+	  format = format.replace(RegExp.$1,
+	  RegExp.$1.length==1? o[k] :
+	  ("00"+ o[k]).substr((""+ o[k]).length));
+	  return format;
+	  }
+	  
+	  $.getJSON("https://wx.ccdgut.edu.cn/ccdgutwx/jinchuxiao/dy!newjinchu.action?xuehao=&jinchuleixing=2",function(data){
+		  console.log(data)
+			// data=eval( "("+data+")"  );
+			 
+			$("#myimg").attr("src","https://wx.ccdgut.edu.cn/ccdgutwx//images/right2.png")
+			 
+			 $("#jinchuleixingstr").html( "出校" );
+			 
+			 $("#mymessage").html("学生:"+"白名单验证通过，该申请离校扫码1次,离校码只能使用一次,请不要重复打开");
+
+            //  随机码位置
+             $(".picker").css("left",($(window).width())/2-125 +"px")
+			 
+	  })
+	 
+
+	 
+	 $(function(){
+   	  
+   	   
+   	   $(".bar-body").css( "left",($(window).width()-$(".bar-body").width())/2+"px" );
+   	   
+   	   setTimeout("shuaxin()",  1000*55 );
+   	   
+   	   shijiandiv();
+   	   
+
+   	   
+      });
+      
+      function shijiandiv(){
+   	   
+   	 $(".shijiandiv").html( "<center>"+ ( new Date().format('hh:mm:ss.S') )+
+		"<br/><span style='color:white;background-color:white;margin-top:8px;padding-top:2px;padding-bottom:2px'>&nbsp;&nbsp;&nbsp;随机码&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;</span></center>");
+  	  
+   	   
+   	   setTimeout("shijiandiv()",100);
+      }
+	 </script> 
+
+	<!-- 色块选择 -->
+    <script type="text/javascript">
+        Colorpicker.create({
+        el: "color-picker", //元素id
+        color: "#000fff", //默认颜色
+        change: function (elem, hex) {
+            //选中颜色发生改变时事件
+            elem.style.backgroundColor = hex;
+        } })
+    </script>
+
+	<!-- 文本输入 -->
+    <script>
+        function shuzi(){
+        var suijima=document.getElementById("color-picker").innerHTML = "<span style='black';>随机码&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;"+value+"</span> ";
+        }
+        shuzi();
+    </script>
